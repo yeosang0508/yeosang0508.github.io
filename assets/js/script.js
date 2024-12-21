@@ -1,8 +1,26 @@
+function toggleMenu() {
+    const sideHeader = document.querySelector(".side-header");
+    sideHeader.classList.toggle("open");
+}
+
+// 메뉴 클릭 시 닫기
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sideHeader = document.querySelector(".side-header");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            sideHeader.classList.remove("open"); // 메뉴 닫기
+        });
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll(".nav-link");
     const menuIcon = document.querySelector(".menu-icon");
     const nav = document.querySelector(".side-nav");
     const sections = document.querySelectorAll("section");
+
 
     // 메뉴 아이콘 클릭 시 메뉴 표시/숨김
     menuIcon.addEventListener("click", function () {
@@ -47,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 // 타이핑 효과 적용
 var typed = new Typed('.typed', {
     strings: ["SHIN SEUNG-AE.", "a Developer."],
@@ -60,3 +77,5 @@ var typed = new Typed('.typed', {
     cursorChar: "|",      // 커서 문자
     contentType: 'html'   // 콘텐츠 타입
 });
+
+

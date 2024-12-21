@@ -15,6 +15,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -67,6 +71,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juns0\portfolio\yeosang0508.github.io" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juns0\portfolio\yeosang0508.github.io\assets\images" />
     </key>
@@ -104,7 +111,12 @@
       <updated>1734412779024</updated>
       <workItem from="1734412780660" duration="4084000" />
       <workItem from="1734422753505" duration="13648000" />
-      <workItem from="1734438214652" duration="30303000" />
+      <workItem from="1734438214652" duration="30647000" />
+      <workItem from="1734630025675" duration="7471000" />
+      <workItem from="1734639708521" duration="2360000" />
+      <workItem from="1734668782344" duration="9356000" />
+      <workItem from="1734685908935" duration="1182000" />
+      <workItem from="1734768060057" duration="91000" />
     </task>
     <servers />
   </component>

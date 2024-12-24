@@ -1,15 +1,32 @@
-// GSAP 애니메이션 타임라인
-gsap.timeline()
-    .to(".background-text", {
-        opacity: 1,
-        scale: 1,
-        duration: 1.5,
-        ease: "power4.out"
-    }) // 배경 텍스트 확대 효과
-    .to(".main-text", {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power4.out"
-    }, "-=1"); // 메인 텍스트 페이드 인 + 위로 이동
+document.addEventListener("DOMContentLoaded", () => {
+    // 새로고침 시 기본 섹션(section1)으로 이동
+    const targetId = "section1";
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+
+});
+
+/// 스크롤 이벤트 리스너
+window.addEventListener('scroll', () => {
+    // 스크롤 위치가 100px 이상일 때 버튼 보이기
+    if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 20
+    ) {
+        document.getElementById('btn-back-to-top').style.display = 'block';
+    } else {
+        document.getElementById('btn-back-to-top').style.display = 'none';
+    }
+});
+
+// 클릭 시 #section1으로 부드럽게 이동
+function backToSection1() {
+    const section1 = document.getElementById('section1');
+    if (section1) {
+        section1.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 

@@ -5,55 +5,433 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신승애 포트폴리오</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/js/script.js">
+    <script src="assets/js/script.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
-<body>
-
-<header>
-    <a href="mailto:yeosang0508@gmail.com">yeosang0508@gmail.com</a>
-    <nav>
-        <a href="#">Info</a>
-        <a href="#" style="padding-right: 20px;">Select Works</a>
-    </nav>
-</header>
-
-<div class="container">
-    <div class="background-text">Full-Stack</div>
-    <div class="main-text">
-        안녕하세요. 신입 개발자 <span class="accent">신승애</span>입니다.
-    </div>
-</div>
-<div class="scroll">
-    <div class="scroll-btn">
-        <a href="#next-section">
-        <span class="mouse">
-            <span></span>
-        </span>
-            Scroll Me
-        </a>
-    </div>
-</div>
 <script>
-    // GSAP 애니메이션 타임라인
-    gsap.timeline()
-        .to(".background-text", {
-            opacity: 1,
-            scale: 1,
-            duration: 1.5,
-            ease: "power4.out"
-        }) // 배경 텍스트 확대 효과
-        .to(".main-text", {
-            opacity: 1,
-            y: 0,
-            duration: 1.5,
-            ease: "power4.out"
-        }, "-=1"); // 메인 텍스트 페이드 인 + 위로 이동
-
+    // 페이지 로드 시 section1으로 스크롤 이동
+    window.onload = () => {
+        document.getElementById('section1').scrollIntoView({behavior: 'smooth'});
+    };
 
 </script>
 
+<body>
+<header>
+    <a href="mailto:yeosang0508@gmail.com">yeosang0508@gmail.com</a>
+    <nav>
+        <a href="#section3" style="padding-right: 20px;">SKILLS</a>
+        <a href="#section4" style="padding-right: 20px;">PROJECT</a>
+        <a href="#section6" style="padding-right: 20px;">CONTACT</a>
+    </nav>
+</header>
+<div id="section1" class="section">
+    <div class="section-content">
+        <div class="background-text">Full-Stack</div>
+        <div class="main-text">
+            안녕하세요. 신입 개발자 <span class="accent">신승애</span>입니다.
+        </div>
+    </div>
+    <div class="scroll">
+        <div class="scroll-btn">
+            <a href="#section2">
+        <span class="mouse">
+            <span></span>
+        </span>
+                Scroll Me
+            </a>
+        </div>
+    </div>
+    <button onclick="backToSection1()" id="btn-back-to-top" title="위로 가기">Top</button>
+
+</div>
+<!-- 섹션 2: About Me -->
+<div id="section2" class="section">
+    <div class="section-content">
+        <img src="assets/images/profile3.png" alt="Profile Image" class="profile-image">
+        <h1 class="title">OVERVIEW</h1>
+        <div class="text-container">
+            <p>변화를 두려워하지 않고 새로운 도전을 즐기는 <i class="underline">풀스택 개발자</i> 가 되고 싶습니다. <br> 끊임없이 발전하는 기술 트렌드를 따라가며 배움을 실천하는
+                과정에서 전문성과 역량을
+                키워나가는데 보람을 느낍니다. <br> 항상 <i class="underline">긍정적인 마인드</i>를 유지하며, 제 열정과 에너지가 팀에 활기를 불어넣고 좋은 영향을 미치는 것을
+                목표로 하고 있습니다.</p>
+        </div>
+
+        <div class="links">
+            <a href="https://velog.io/@haze0225/posts" target="_blank">
+                <img src="assets/images/velog.png" alt="velog 이미지" style="width: 20px; height: 20px"> velog
+            </a>
+
+            <a href="https://github.com/yeosang0508" target="_blank">
+                <i class="devicon-github-original" style="color: #5FD3F3; margin-right:5px;"></i>
+
+                github</a>
+        </div>
+    </div>
+</div>
+
+<!-- 섹션 3: Skills -->
+<div id="section3" class="section">
+    <div class="section-content">
+        <div class="skills-header">
+            <h1 class="title2">SKILLS</h1>
+            <button class="button button--winona button--border-thin button--round-s" data-text="Read More"><span>Read More</span>
+            </button>
+
+        </div>
+        <div id="container">
+        </div>
+        <div class="skills-columns">
+            <!-- Frontend 섹션 -->
+            <div class="skills-category">
+                <h2>Frontend</h2>
+                <ul>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"/>
+                        HTML
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"/>
+                        CSS
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>
+                        JavaScript
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-plain-wordmark.svg"/>
+                        jQuery
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"/>
+                        Tailwind CSS
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"/>
+                        Bootstrap
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"/>
+                        React
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Backend 섹션 -->
+            <div class="skills-category">
+                <h2>Backend</h2>
+                <ul>
+                    <li>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"/>
+                        Java
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"/>
+                        Python
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"/>
+                        Spring Boot
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"/>
+                        Spring Security
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"/>
+                        MySQL
+                    </li>
+                    <li><i class="devicon-flask-original" style="width: 10px;"></i>
+                        Flask
+                    </li>
+                    <li><i class="devicon-gradle-original"></i>
+                        Gradle
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg"
+                             alt="Maven"> Maven
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"
+                             alt="JSP"> JSP
+                    </li>
+                    <li><img
+                            src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white"
+                            alt="Thymeleaf">
+                        Thymeleaf
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- Tools & Collaboration 섹션 -->
+            <div class="skills-category">
+                <h2>Tools & Collaboration</h2>
+                <ul>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"/>
+                        Docker
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"/>
+                        AWS
+                    </li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"/>
+                        Figma
+                    </li>
+                    <li><img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/notion/notion-original.svg"/>
+                        Notion
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--        <div class="skills-description">-->
+<!--            <div class="skill-category">-->
+<!--                <h3>JAVA</h3>-->
+<!--                <ul>-->
+<!--                    <li>자바 문법 및 객체지향 프로그래밍(OOP) 개념 이해 및 활용</li>-->
+<!--                    <li>JDBC를 사용해 데이터베이스 연동 및 기본 CRUD 작업 구현</li>-->
+<!--                    <li>GUI 애플리케이션 개발 경험</li>-->
+<!--                    <li>이벤트 처리 방식 이해 및 이벤트 기반 애플리케이션 구현 가능</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>Thymeleaf</h3>-->
+<!--                <ul>-->
+<!--                    <li>Spring Boot와 Thymeleaf를 활용한 동적 HTML 렌더링 및 데이터 출력</li>-->
+<!--                    <li>서버 측 데이터를 바인딩하여 효율적인 폼 처리 및 데이터 전송</li>-->
+<!--                    <li>EL 표현식을 활용한 동적 웹 콘텐츠 구성</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>CSS</h3>-->
+<!--                <ul>-->
+<!--                    <li>웹 디자인 기초 및 레이아웃 구성 능력</li>-->
+<!--                    <li>Tailwind CSS와 같은 유틸리티 클래스 기반 프레임워크 활용 경험</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>JavaScript</h3>-->
+<!--                <ul>-->
+<!--                    <li>JavaScript 기본 문법 및 이벤트 처리 이해</li>-->
+<!--                    <li>Ajax를 활용한 비동기 통신 구현</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>HTML</h3>-->
+<!--                <ul>-->
+<!--                    <li>시맨틱 태그를 활용한 구조적인 웹 페이지 설계</li>-->
+<!--                    <li>HTML5의 주요 기능 이해 및 활용</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>JSON & XML</h3>-->
+<!--                <ul>-->
+<!--                    <li>JSON 및 XML 데이터 형식 이해</li>-->
+<!--                    <li>클라이언트-서버 간 데이터 송수신 및 파싱 처리</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>MySQL</h3>-->
+<!--                <ul>-->
+<!--                    <li>데이터베이스 설계 및 SQL 작성</li>-->
+<!--                    <li>ERD 설계 및 정규화 기법 활용</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>Tools</h3>-->
+<!--                <ul>-->
+<!--                    <li>IntelliJ IDEA, Spring Tool Suite(STS)를 활용한 프로젝트 관리</li>-->
+<!--                    <li>VS Code를 사용한 Flask 서버 구축 및 모델 통합</li>-->
+<!--                    <li>SQLyog를 사용한 MySQL 데이터베이스 관리</li>-->
+<!--                    <li>XAMPP를 통한 로컬 서버 환경 구성</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>UI/UX Design</h3>-->
+<!--                <ul>-->
+<!--                    <li>Figma를 사용해 UI/UX 설계 및 프로토타입 제작</li>-->
+<!--                    <li>디자인 시스템 구성 및 협업 툴 활용</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>Framework</h3>-->
+<!--                <ul>-->
+<!--                    <li>Spring MVC 구조를 활용한 웹 애플리케이션 개발</li>-->
+<!--                    <li>REST API 설계 및 Spring Security 기반 인증 구현</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>Dependencies Management</h3>-->
+<!--                <ul>-->
+<!--                    <li>Maven 및 Gradle을 사용한 프로젝트 의존성 관리</li>-->
+<!--                    <li>멀티 모듈 프로젝트 설정 경험</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="skill-category">-->
+<!--                <h3>MyBatis</h3>-->
+<!--                <ul>-->
+<!--                    <li>MyBatis를 활용한 SQL 매핑 및 데이터 처리 자동화</li>-->
+<!--                    <li>JPA를 활용한 ORM 기반의 효율적인 데이터 작업</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div id="section4" class="section">
+    <div class="section-content">
+        <div class="container">
+            <h1 class="title2">PROJECT <span class="project-subtitle">RECORD</span></h1>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="custom-card">
+                    <a href="project1.html" class="btn btn-primary" style="text-decoration: none;">
+                        <img src="assets/images/tripset.gif" alt="Project 1">
+                        <h5 class="card-title">TRIPSET</h5>
+                        <div class="card-text">여행 준비를 할 수 있도록 돕기 위해 개발된 종합 여행 일정 관리 플랫폼</div>
+                        <div class="card-extra">2024.08.22 ~ 2024.10.01 <br> JAVA, PYTHON, FLASK</div>
+                    </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="custom-card">
+                    <a href="project2.html" class="btn btn-primary" style="text-decoration: none;">
+                        <img src="assets/images/Tailsroute.png" alt="Project 2">
+                        <h5 class="card-title" >TAILSROUTE</h5>
+                        <div class="card-text">강아지 행동을 분석해 생활을 체계적으로 관리하는 플랫폼입니다.</div>
+                        <div class="card-extra">2024.10.02 ~ 2024.12.12 <br>OpenCV</div>
+                    </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="custom-card">
+                    <a href="project3.html" class="btn btn-primary" style="text-decoration: none;">
+                        <img src="assets/images/portfolio.png" alt="Project 3">
+                        <h5 class="card-title">PORTFOLIO</h5>
+                        <div class="card-text">개인 프로젝트와 기술 스택을 정리한 포트폴리오 웹사이트</div>
+                        <div class="card-extra">2024.12.17 ~ 2024.12.24 <br>HTML, CSS, JavaScript</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="section5" class="section">
+    <div class="section-content">
+        <h1 class="title2" style="color:#5FD3F3; font-weight: bold;">학력사항</h1>
+        <hr>
+        <div class="education-entry">
+            <div class="education-left">
+                <h1>HANBAT UNIVERSITY</h1>
+                <p>화학생명공학과 졸업</p>
+            </div>
+            <div class="education-right">2020.03 ~ 2024.02</div>
+        </div>
+
+        <div class="education-entry">
+            <div class="education-left">
+                <h1> Holston Girls' High School</h1>
+                <p>인문계열 이과 졸업</p>
+            </div>
+            <div class="education-right">2015.03 ~ 2018.02</div>
+        </div>
+
+        <!-- 자격증 섹션 -->
+        <h1 class="title2" style="color:#5FD3F3; font-weight: bold; margin-top: 50px">자격증</h1>
+        <hr>
+        <div class="certification-entry">
+            <div class="certification-left">
+                <h1>위험물산업기사</h1>
+                <p>한국산업인력공단</p>
+            </div>
+            <div class="certification-right">2021.08.20</div>
+        </div>
+
+        <div class="certification-entry">
+            <div class="certification-left">
+                <h1>컴퓨터활용능력 1급</h1>
+                <p>대한상공회의소</p>
+            </div>
+            <div class="certification-right">2020.12.31</div>
+        </div>
+    </div>
+</div>
+<div id="section6" class="section">
+    <div class="contact-container">
+        <div class="image-container">
+            <img src="assets/images/profile2.png" alt="City Image">
+        </div>
+
+        <div class="info-container">
+            <h1 class="contact-title">CONTACT ME</h1>
+            <div class="contact-details">
+                <p><i class="bi bi-envelope-at-fill" style="color: black;"></i><strong> Email</strong><br>
+                    yeosang0508@gmail.com</p>
+                <p><i class="bi bi-phone-fill" style="color: black;"></i><strong>Cell-PhoneNum</strong><br>010-5168-7981
+                </p>
+                <p>
+                    <i class="devicon-github-original colored"></i>
+                    <strong>Github</strong><br> <a href="https://github.com/yeosang0508" target="_blank">https://github.com/yeosang0508</a>
+                </p>
+                <p><img src="assets/images/velog2.png" alt="velog2" style="width: 20px;"><strong> Velog</strong><br> <a
+                        href="https://velog.io/@haze0225/posts" target="_blank">https://velog.io/@haze0225/posts</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 애니메이션 정의
+        const section1Animation = () => {
+            gsap.timeline()
+                .to(".background-text", {
+                    opacity: 1,
+                    scale: 1,
+                    duration: 1.5,
+                    ease: "power4.out"
+                }) // 배경 텍스트 확대 효과
+                .to(".main-text", {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.5,
+                    ease: "power4.out"
+                }, "-=1"); // 메인 텍스트 페이드 인 + 위로 이동
+        };
+
+        // Intersection Observer 설정
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    section1Animation(); // 애니메이션 실행
+                }
+            });
+        }, {threshold: 0.5}); // 섹션의 50%가 화면에 들어올 때 실행
+
+        // section1 감지
+        const section1 = document.getElementById("section1");
+        if (section1) {
+            observer.observe(section1);
+        }
+    });
+
+</script>
 
 </body>
 </html>

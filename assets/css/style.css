@@ -634,6 +634,7 @@ p {
 /* 카드 컨테이너 스타일 */
 .card-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 30px; /* 카드 간격 */
@@ -642,7 +643,6 @@ p {
 /* 카드 스타일 */
 .custom-card {
     position: relative;
-    width: 350px; /* 카드 너비 */
     height: auto; /* 카드 높이는 내용에 따라 유동적 */
     background-color: #2C2C2C;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -692,6 +692,19 @@ p {
 @media (max-width: 768px) {
     .custom-card {
         width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .custom-card {
+        width: calc(50% - 20px); /* 2열 레이아웃 */
+    }
+}
+
+@media (max-width: 620px) {
+    .custom-card {
+        width: 100%; /* 1열 레이아웃 */
     }
 }
 
